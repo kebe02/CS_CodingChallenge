@@ -69,7 +69,7 @@ public class LogEntryConsumerTest {
     }
 
     @Test
-    public void durationEqualTo4Milliseconds_shouldNotAlert() throws SQLException {
+    public void durationEqualTo4Milliseconds_shouldAlert() throws SQLException {
 
         var id = "test";
         var now = System.currentTimeMillis();

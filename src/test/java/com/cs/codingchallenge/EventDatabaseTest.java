@@ -1,10 +1,9 @@
 package com.cs.codingchallenge;
 
 import com.cs.codingchallenge.api.LogEvent;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 import static org.junit.Assert.assertEquals;
@@ -24,8 +23,9 @@ public class EventDatabaseTest {
     }
 
     @After
-    public void after() throws SQLException {
+    public void after() throws SQLException, IOException {
         database.rollback();
+        database.close();
     }
 
     @Test
